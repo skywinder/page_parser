@@ -26,7 +26,8 @@ def parse
   # puts all_brands_links
   all_brands_names = brands_links.map { |x| x[0].text }
 
-  all_brands_names.zip(all_brands_links).take(5) { |n, l| puts "#{n} #{l}" }
+  all_brands_names.zip(all_brands_links).take(3).each { |n, l| puts "#{n} #{l}" }
+
 end
 
 
