@@ -6,16 +6,57 @@ BASE_URL = 'http://www.ejuices.co'
 WEB_STRING = "http://www.ejuices.co/collections/all-brands"
 
 
+Eliqid = Struct.new(:image, :vg, :descr, :brand, :title, :options) do
+  def inspect
+    puts "DESCR:\n#{title}\n#{vg}\n#{descr}\n#{brand}\n#{options}"
+  end
+end
+
+
+Brand = Struct.new(:name, :link) do
+  def fetch_liquids
+    page = Nokogiri::HTML(RestClient.get(self.link))
+    page_css = page.css('div.product-inner')
+
+    liquids_images = page_css.map { |product|
+      product.css('img')[0].attr('src')
+    }
+
+    liquids_VG = page_css.map { |product|
+      product.css('p')[1].css('span').text
+    }
+    liquids_Description = page_css.map { |product|
+      product.css('p')[0].text
+    }
+
+    liquids_Brand = page_css.map { |product|
+      product.css('p.brand').css('a')[0].text
+    }
+
+    liquids_Title = page_css.map { |product|
+      product.css('p.title').css('a')[0].text
+    }
+
+    liquids_Option = page_css.map { |product|
+      product.css('select').css('option').map { |option|
+        option.text
+      }
+    }
+
+
+    (0..liquids_Title.count).map do |i|
+      if liquids_Title[i]
+        Eliqid.new(liquids_images[i], liquids_VG[i], liquids_Description[i], liquids_Brand[i], liquids_Title[i], liquids_Option[i])
+      end
+    end
+  end
+end
+
 def get_all_brands_links(page)
   dropdowns = page.css('ul.dropdown-wrap')
   brands= dropdowns[1]
   brands_links =brands.css('li.dropdown-item').map { |x| x.css('a') }
-  # brands_links.each {
-  #     |li| puts li[0]['href']
-  # }
   brands_links
-  # puts page.search('li.dd-li')
-  # puts brands_links.count
 
 end
 
@@ -26,8 +67,22 @@ def parse
   # puts all_brands_links
   all_brands_names = brands_links.map { |x| x[0].text }
 
-  all_brands_names.zip(all_brands_links).take(3).each { |n, l| puts "#{n} #{l}" }
 
+  brands_links_take = all_brands_names.zip(all_brands_links).drop(1).take(5)
+  # brands_links_take.each { |n, l| puts "#{n} #{l}" }
+
+  all_brands = []
+  brands_links_take.each { |b|
+    brand_new = Brand.new(b[0], b[1])
+    all_brands.push(brand_new)
+    liquids = brand_new.fetch_liquids
+    liquids.each do |l|
+      puts l.inspect
+    end
+  }
+
+  all_brands.each { |b|
+  }
 end
 
 
