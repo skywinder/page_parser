@@ -6,14 +6,14 @@ BASE_URL = 'http://www.ejuices.co'
 WEB_STRING = "http://www.ejuices.co/collections/all-brands"
 
 
-Eliqid = Struct.new(:image, :vg, :descr, :brand, :title, :options) do
+Eliqid = Struct.new(:image, :vg, :descr, :brand, :title, :options, :price, :volume, :nic_level) do
   def inspect
     puts "DESCR:\n#{title}\n#{vg}\n#{descr}\n#{brand}\n#{options}"
   end
 end
 
 
-Brand = Struct.new(:name, :link) do
+Brand = Struct.new(:name, :link, :liquids) do
   def fetch_liquids
     page = Nokogiri::HTML(RestClient.get(self.link))
     page_css = page.css('div.product-inner')
@@ -43,9 +43,21 @@ Brand = Struct.new(:name, :link) do
       }
     }
 
+    liquids_Option.each {|v|
+      if v.count > 0
 
-    (0..liquids_Title.count).map do |i|
-      if liquids_Title[i]
+        v.each {|o|
+          o_gsub = o.gsub(/\s+/, "")
+          o_split1 = o_gsub.split(/(.*) \/ (.*) - $ (.*) /)
+
+          o_split = o_gsub.split(/[,\/-]/)
+          puts o_split
+        }
+      end
+    }
+
+    self.liquids = (0..liquids_Title.count).map do |i|
+      if liquids_Title[i] and not liquids_Title[i].include? "Sample"
         Eliqid.new(liquids_images[i], liquids_VG[i], liquids_Description[i], liquids_Brand[i], liquids_Title[i], liquids_Option[i])
       end
     end
@@ -68,20 +80,21 @@ def parse
   all_brands_names = brands_links.map { |x| x[0].text }
 
 
-  brands_links_take = all_brands_names.zip(all_brands_links).drop(1).take(5)
+  brands_links_take = all_brands_names.zip(all_brands_links).drop(1).take(3)
   # brands_links_take.each { |n, l| puts "#{n} #{l}" }
 
   all_brands = []
   brands_links_take.each { |b|
     brand_new = Brand.new(b[0], b[1])
+    brand_new.fetch_liquids
     all_brands.push(brand_new)
-    liquids = brand_new.fetch_liquids
-    liquids.each do |l|
-      puts l.inspect
-    end
   }
 
   all_brands.each { |b|
+
+    b.liquids.each do |l|
+      puts l.inspect
+    end
   }
 end
 
