@@ -1,4 +1,5 @@
 require_relative 'eliquid'
+require 'yaml'
 
 module PageParser
   class Brand
@@ -46,26 +47,17 @@ module PageParser
         }
       }
 
-      liquids_option.each { |v|
-        if v.count > 0
 
-          v.each { |o|
-            o_gsub = o.gsub(/\s+/, "")
-            o_split1 = o_gsub.split(/(.*) \/ (.*) - $ (.*) /)
 
-            o_split = o_gsub.split(/[,\/-]/)
-            # puts o_split
-          }
-        end
-      }
-
-      self.liquids = (0..liquids_title.count).map do |i|
+      @liquids = (0..liquids_title.count).map do |i|
         if liquids_title[i] and not liquids_title[i].include? "Sample"
-          liquid = PageParser::Eliquid.new(liquids_images[i], liquids_vg[i], liquids_description[i], liquids_brand[i], liquids_title[i], liquids_option[i])
-          liquid.inspect
+          PageParser::Eliquid.new(liquids_images[i], liquids_vg[i], liquids_description[i], liquids_brand[i], liquids_title[i], liquids_option[i])
         end
       end
-      # end
+      @liquids.each{|l|
+        puts l.to_yaml
+
+      }
     end
   end
 

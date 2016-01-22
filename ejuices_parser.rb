@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'restclient'
 require 'nokogiri'
-# require './brand'
 require_relative 'brand'
 
 module PageParser
@@ -23,7 +22,9 @@ module PageParser
 
     all_brands = []
     brands_links_take.each { |b|
-      brand_new = Brand.new(b[0], b[1])
+      name = b[0]
+      link = b[1]
+      brand_new = Brand.new(name, link)
       brand_new.fetch_liquids
       all_brands.push(brand_new)
     }
