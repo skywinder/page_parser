@@ -17,7 +17,7 @@ module PageParser
       @liquids_options = []
       liquids_option.each { |option_string|
         liquid_option = PageParser::LiquidOption.new(option_string)
-        unless liquid_option
+        if liquid_option
           @liquids_options.push(liquid_option)
         end
       }
