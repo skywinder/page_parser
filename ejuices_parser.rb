@@ -19,24 +19,32 @@ module PageParser
     all_brands_names = brands_links.map { |x| x[0].text }
 
 
-    brands_links_take = all_brands_names.zip(all_brands_links).drop(1).take(3)
+    brands_links_take = all_brands_names.zip(all_brands_links)
     # brands_links_take.each { |n, l| puts "#{n} #{l}" }
 
     all_brands = []
     brands_links_take.each { |b|
       name = b[0]
       link = b[1]
+      puts "Parse brand: #{name}"
       new_brand = Brand.new(name, link)
-      new_brand.fetch_liquids
+      begin
+        new_brand.fetch_liquids
+      rescue => e
+        puts "FAIL_TO_PARSE"
+        puts e
+      end
+
       all_brands.push(new_brand)
     }
 
     save_brands(all_brands)
+    puts all_brands
   end
 
 
   def save_brands(all_brands)
-    File.open(BRANDS_FILE, 'w') { |f| f.write(YAML.dump(all_brands)) }
+    File.open("#{BRANDS_FILE}-#{Time.now.to_i}", 'w') { |f| f.write(YAML.dump(all_brands)) }
   end
 
   def self.load_brands
@@ -46,7 +54,6 @@ end
 
 
 if __FILE__ == $PROGRAM_NAME
-  # PageParser.parse # => Nokogiri::HTML::Document
-  brands = PageParser.load_brands
-  puts brands
+  PageParser.parse # => Nokogiri::HTML::Document
+  # brands = PageParser.load_brands
 end
