@@ -16,7 +16,7 @@ module PageParser
       @liquids_images, @liquids_vg, @liquids_description, @liquids_brand, @liquids_title= liquids_images, liquids_vg, liquids_description, liquids_brand, liquids_title
       @liquids_options = []
       liquids_option.each { |option_string|
-        liquid_option = PageParser::LiquidOption.new(option_string)
+        liquid_option = PageParser::LiquidOption.new(option_string, liquids_images)
         if liquid_option
           @liquids_options.push(liquid_option)
         end
