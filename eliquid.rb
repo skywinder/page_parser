@@ -6,11 +6,13 @@ module PageParser
     attr_accessor :vg
     attr_accessor :descr
     attr_accessor :brand
-    attr_accessor :title
-    attr_accessor :options
+    attr_accessor :liquids_title
+    attr_accessor :liquids_options
     attr_accessor :price
     attr_accessor :volume
     attr_accessor :nic_level
+
+    alias_method :options, :liquids_options
 
     def initialize(liquids_images, liquids_vg, liquids_description, liquids_brand, liquids_title, liquids_option)
       @liquids_images, @liquids_vg, @liquids_description, @liquids_brand, @liquids_title= liquids_images, liquids_vg, liquids_description, liquids_brand, liquids_title
@@ -21,6 +23,10 @@ module PageParser
           @liquids_options.push(liquid_option)
         end
       }
+    end
+
+    def add_options(liquid)
+      self.options.concat(liquid.options).compact!
     end
 
   end

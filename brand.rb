@@ -6,7 +6,9 @@ module PageParser
 
     attr_accessor :name
     attr_accessor :link
-    attr_accessor :liquids
+    attr_accessor :liquids_title
+    attr_accessor :liq_hash
+    alias_method :title, :liquids_title
 
     # Brand = Struct.new(:name, :link, :liquids) do
     def initialize(name, link)
@@ -58,16 +60,33 @@ module PageParser
       }
 
 
-      @liquids = (0..liquids_title.count).map do |i|
+      liquids = (0...liquids_title.count).map do |i|
         if liquids_title[i] and not liquids_title[i].include? "Sample"
-          PageParser::Eliquid.new(liquids_images[i], liquids_vg[i], liquids_description[i], liquids_brand[i], liquids_title[i], liquids_option[i])
+          eliquid_new = PageParser::Eliquid.new(liquids_images[i], liquids_vg[i], liquids_description[i], liquids_brand[i], liquids_title[i], liquids_option[i])
+          fail "nil liquid" if eliquid_new.nil?
+          eliquid_new
+        else
+          nil
         end
       end
-      # @liquids.each { |l|
-      #   puts l.to_yaml
-      # }
+      liquids.compact!
 
+      @liq_hash = self.merge_liquids(liquids)
     end
+
+    # @return [Hash]
+    def merge_liquids(liquids)
+      liquids_hash = {}
+      liquids.each do |liquid|
+        if liquids_hash.has_key? liquid.liquids_title
+          liquids_hash[liquid.liquids_title].add_options(liquid)
+        else
+          liquids_hash[liquid.liquids_title] = liquid
+        end
+      end
+      liquids_hash
+    end
+
   end
 
   module_function

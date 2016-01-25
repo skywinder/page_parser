@@ -7,6 +7,8 @@ module PageParser
   BASE_URL = 'http://www.ejuices.co'
   WEB_STRING = "http://www.ejuices.co/collections/all-brands"
 
+  BRANDS_FILE = './brands.bk'
+
   module_function
 
   def parse
@@ -29,16 +31,22 @@ module PageParser
       all_brands.push(new_brand)
     }
 
-    all_brands.each { |b|
+    save_brands(all_brands)
+  end
 
-      b.liquids.each do |l|
-        puts l.inspect
-      end
-    }
+
+  def save_brands(all_brands)
+    File.open(BRANDS_FILE, 'w') { |f| f.write(YAML.dump(all_brands)) }
+  end
+
+  def self.load_brands
+    YAML.load(File.read(BRANDS_FILE))
   end
 end
 
 
 if __FILE__ == $PROGRAM_NAME
-  PageParser.parse # => Nokogiri::HTML::Document
+  # PageParser.parse # => Nokogiri::HTML::Document
+  brands = PageParser.load_brands
+  puts brands
 end
