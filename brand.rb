@@ -29,16 +29,23 @@ module PageParser
         product.css('p')[0].text
       }
 
-      liquids_brand = page_css.map { |product|
-
-        product.css('p.brand').css('a')[0].text
-      }
-
-
-      liquids_title = page_css.map { |product|
+      # liquids_brand = page_css.map { |product|
+      #
+      #   product.css('p.brand').css('a')[0].text
+      # }
 
 
-        product.css('p.title').css('a')[0].text
+      liquids_brand, liquids_title, _ = page_css.map { |product|
+        text = product.css('p.title').css('a')[0].text
+        # text.encode!('UTF-8', :invalid => :replace, :undef => :replace)
+        o_split = text.split(/\s[,\/-]\s/)
+        # fail "Params count wrong (should be 3): #{o_split}" if o_split.count != 3
+        o_split.map! { |x|
+          x.strip!
+          x.gsub!(/[^\w\d\s-]/, '')
+          x
+        }
+        o_split
       }
 
       liquids_option = page_css.map { |product|
@@ -48,16 +55,15 @@ module PageParser
       }
 
 
-
       @liquids = (0..liquids_title.count).map do |i|
         if liquids_title[i] and not liquids_title[i].include? "Sample"
           PageParser::Eliquid.new(liquids_images[i], liquids_vg[i], liquids_description[i], liquids_brand[i], liquids_title[i], liquids_option[i])
         end
       end
-      @liquids.each{|l|
+      @liquids.each { |l|
         puts l.to_yaml
-
       }
+
     end
   end
 
