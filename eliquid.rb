@@ -30,6 +30,7 @@ module PageParser
       opts.each{|option|
         csv_arr.push(self.fill_next_strings(option))
       }
+      csv_arr
     end
 
     def fill_next_strings(option)
