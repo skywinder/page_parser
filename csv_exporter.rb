@@ -8,12 +8,18 @@ module PageParser
     def self.export_to_csv(brands)
       csv_array = [first_string]
 
-
+      begin
       brands.each { |brand|
+        puts "Export: #{brand.name}"
         brand.liq_hash.each { |liquid|
           csv_array.concat(liquid[1].to_csv)
         }
       }
+      rescue => e
+        puts "FAIL_TO_EXPORT"
+        puts e
+      end
+
       string = csv_array.join("\n")
       self.write_scv(string)
     end

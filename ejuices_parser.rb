@@ -57,6 +57,5 @@ end
 if __FILE__ == $PROGRAM_NAME
   # PageParser.parse # => Nokogiri::HTML::Document
   brands = PageParser.load_brands
-  test_brands = brands.take(1)
-  PageParser::CSVExporter.export_to_csv test_brands
+  PageParser::CSVExporter.export_to_csv brands
 end
