@@ -25,17 +25,17 @@ module PageParser
 
     def to_csv
       opts = self.liquids_options.dup
-      self.fill_first_string(opts.shift)
+      str = self.fill_first_string(opts.shift)
+      csv_arr = [str]
       opts.each{|option|
-        self.fill_next_strings(option)
+        csv_arr.push(self.fill_next_strings(option))
       }
-      self.liquids_options.each do |option|
-
-      end
     end
 
     def fill_next_strings(option)
       # code here
+      "#{self.get_handle},,,,,,,,#{option.bottle_size},,#{option.nic_level},,#{@liquids_vg},\"\",#{option.bottle_size_num},shopify,#{DEF_AMOUNT},continue,manual,#{option.retailing_price},,true,true,,#{option.image_url},#{self.img_descr},,,,,,,,,,,,,,,,,,g"
+      #acer-dulcia,,,,,,,,07ml,,03mg,,50pg/50vg,""                                                                     ,15,shopify,29,continue,manual,4.99,,true,true,,,,,,,,,,,,,,,,,,,,,g
     end
 
     DEF_AMOUNT = "0"
@@ -45,18 +45,22 @@ module PageParser
     TAG = "e-Juice preorder"
 
     def fill_first_string(option)
-      "#{self.get_handle},#{self.liquids_title},#{@liquids_description},#{@liquids_brand},#{TYPE},\"#{TAG},#{@liquids_brand}\",true,Bottle Size,#{option.bottle_size},Nicotine Level,#{option.nic_level},PG/VG Ratio,#{@liquids_vg},\"\",#{option.bottle_size_num},shopify,#{DEF_AMOUNT},continue,manual,#{option.retailing_price},,true,true,,#{option.image_url},#{self.img_descr},false,,,,,,,,,,,,,,,,,g"
+      "#{self.get_handle},#{self.liquids_title},#{@liquids_description},#{@liquids_brand},#{TYPE},\"#{TAG},#{@liquids_vg}\",true,Bottle Size,#{option.bottle_size},Nicotine Level,#{option.nic_level},PG/VG Ratio,#{@liquids_vg},\"\",#{option.bottle_size_num},shopify,#{DEF_AMOUNT},continue,manual,#{option.retailing_price},,true,true,,#{option.image_url},#{self.img_descr},false,,,,,,,,,,,,,,,,,g"
       # "Handle,Title,Body (HTML),Vendor,                                                  Type,         Tags,                         Published,Option1 Name,Option1 Value,Option2 Name,Option2 Value,Option3 Name,Option3 Value,           Variant SKU,Variant Grams,Variant Inventory Tracker,Variant Inventory Qty,Variant Inventory Policy,Variant Fulfillment Service,
       #                                                                                                                                                                                                                                                                                                                  Variant Price,Variant Compare At Price,Variant Requires Shipping,Variant Taxable,Variant Barcode,Image Src,Image Alt Text,Gift Card,SEO Title,SEO Description,Google Shopping / Google Product Category,Google Shopping / Gender,Google Shopping / Age Group,Google Shopping / MPN,Google Shopping / AdWords Grouping,Google Shopping / AdWords Labels,Google Shopping / Condition,Google Shopping / Custom Product,Google Shopping / Custom Label 0,Google Shopping / Custom Label 1,Google Shopping / Custom Label 2,Google Shopping / Custom Label 3,Google Shopping / Custom Label 4,Variant Image,Variant Weight Unit\n"
       # "acer-dulcia,Acer Dulcia,<p>Subt,"",true,Size,07ml,Nicotine Level,03mg,PG/VG Ratio,20pg/80vg,"",15,shopify,22,continue,manual,4.99,,true,true,,https://cdn.shopify.com/s/files/1/1026/5581/products/Acer-Dulcia.jpeg?v=1451296908,Acer Dulcia - Cloud Alchemist E Liquid,false,,,,,,,,,,,,,,,,,g"
     end
 
     def img_descr
-      "#{@liquids_brand} - #{@liquids_title} - #{TYPE}"
+      string = "#{@liquids_brand} - #{@liquids_title} - #{TYPE}"
+      string
     end
 
     def get_handle
-      "#{self.brand}-#{self.liquids_title}".downcase!.gsub!(/[\W|\D]/,'')
+      brandliquids_title_downcase_gsub = "#{@liquids_brand}-#{@liquids_title}"
+      brandliquids_title_downcase_gsub.downcase!
+      brandliquids_title_downcase_gsub.gsub!(/\p{^Alnum}/, '-')
+      brandliquids_title_downcase_gsub
     end
 
   end
