@@ -1,7 +1,8 @@
 module PageParser
   class CSVExporter
 
-    def export_to_csv(brands)
+
+    def self.export_to_csv(brands)
       csv = first_string
 
       puts csv
