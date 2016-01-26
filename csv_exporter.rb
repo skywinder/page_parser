@@ -3,13 +3,12 @@ module PageParser
 
 
     def self.export_to_csv(brands)
-      csv = first_string
+      csv_array = [first_string]
 
-      puts csv
 
       brands.each { |brand|
         brand.liq_hash.each { |liquid|
-          p liquid
+          csv_array.push(liquid.to_csv)
         }
       }
     end
