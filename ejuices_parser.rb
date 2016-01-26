@@ -2,6 +2,7 @@ require 'rubygems'
 require 'restclient'
 require 'nokogiri'
 require_relative 'brand'
+require_relative 'csv_exporter'
 
 module PageParser
   BASE_URL = 'http://www.ejuices.co'
@@ -54,6 +55,8 @@ end
 
 
 if __FILE__ == $PROGRAM_NAME
-  PageParser.parse # => Nokogiri::HTML::Document
-  # brands = PageParser.load_brands
+  # PageParser.parse # => Nokogiri::HTML::Document
+  brands = PageParser.load_brands
+  test_brands = brands.take(1)
+  CSVExporter.export_to_csv test_brands
 end
