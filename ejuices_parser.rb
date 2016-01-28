@@ -12,7 +12,7 @@ module PageParser
 
   module_function
 
-  def parse(file_name)
+  def parse(filename)
     page = Nokogiri::HTML(RestClient.get(WEB_STRING))
     brands_links = PageParser.get_all_brands_links(page)
     all_brands_links = brands_links.map { |x| BASE_URL+x[0]['href'] }
@@ -60,7 +60,7 @@ module PageParser
   end
 
 
-  def save_brands(all_brands, filename = "#{BRANDS_FILE}-#{Time.now.to_i}.bk")
+  def save_brands(all_brands, filename)
     File.open(filename, 'w') { |f| f.write(YAML.dump(all_brands)) }
   end
 
@@ -77,6 +77,7 @@ end
 
 if __FILE__ == $PROGRAM_NAME
 
-  PageParser.parse "brand_one.bk"
+  PageParser.parse "#{BRANDS_FILE}-#{Time.now.to_i}.bk
   # csv_from_file "#{BRANDS_FILE}.bk"
+
 end

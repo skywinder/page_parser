@@ -3,7 +3,7 @@ require_relative "liquid_option"
 require_relative "ejuices_parser"
 module DupFinder
 
-  def has_dup_images?(option)
+  def self.has_dup_images?(option)
 
     image_url = option.image_url
 
@@ -19,10 +19,15 @@ module DupFinder
 
 end
 
-if __FILE__ == $PROGRAM_NAME
-  brands = PageParser.load_brands("#{BRANDS_FILE}.bk")
+def first_option(brands)
   liq_hash = brands.first.liq_hash
-  liquid = liq_hash.to_a[1]
-  option = liquid.liquids_options.first
+  liquid = liq_hash.to_a[0][1]
+  options = liquid.liquids_options
+  opt = options[0]
+end
+
+if __FILE__ == $PROGRAM_NAME
+  brands = PageParser.load_brands("brand_one.bk")
+  option = first_option(brands)
   is_dup = DupFinder.has_dup_images? option
 end
