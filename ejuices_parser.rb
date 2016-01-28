@@ -2,6 +2,7 @@ require 'rubygems'
 require 'restclient'
 require 'nokogiri'
 require 'yaml'
+
 require_relative 'brand'
 require_relative 'csv_exporter'
 
@@ -15,7 +16,7 @@ module PageParser
 
   def parse(filename)
     page = Nokogiri::HTML(RestClient.get(WEB_STRING))
-    brands_links = PageParser.get_all_brands_links(page)
+    brands_links = PageParser.get_all_brands_links page
     all_brands_links = brands_links.map { |x| BASE_URL+x[0]['href'] }
     # puts all_brands_links
     all_brands_names = brands_links.map { |x| x[0].text }
@@ -78,7 +79,7 @@ end
 
 if __FILE__ == $PROGRAM_NAME
 
-  # PageParser.parse "#{BRANDS_FILE}-#{Time.now.to_i}.bk
-  # PageParser.parse "brand_one.bk"
-  csv_from_file "brands.bk"
+  # PageParser.parse "#{BRANDS_FILE}-#{Time.now.to_i}.bk"
+  PageParser.parse "brand_one.bk"
+  # csv_from_file "brands.bk"
 end

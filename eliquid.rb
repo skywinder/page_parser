@@ -16,6 +16,7 @@ module PageParser
       liquids_option.each { |option_string|
         liquid_option = PageParser::LiquidOption.new(option_string, liquids_images)
         if liquid_option
+          liquid_option.check_dup
           @liquids_options.push(liquid_option)
         end
       }

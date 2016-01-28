@@ -3,7 +3,7 @@ require 'phashion'
 
 require_relative "liquid_option"
 require_relative "ejuices_parser"
-module DupFinder
+module PageParser
 
   DUP_COMPARE_NAME = 'dup_to_check.png'
 
@@ -41,7 +41,7 @@ end
 if __FILE__ == $PROGRAM_NAME
   brands = PageParser.load_brands("brand_one.bk")
   option = first_option(brands)
-  is_dup = DupFinder.has_dup_images? option
+  is_dup = PageParser.has_dup_images? option
 
   puts is_dup
 end

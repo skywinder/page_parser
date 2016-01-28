@@ -3,7 +3,7 @@ require_relative "eliquid"
 module PageParser
   class CSVExporter
 
-    CSV_FILE = "import_csv"
+    CSV_FILE = "to_import"
 
     def self.export_to_csv(brands)
       csv_array = [first_string]

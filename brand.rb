@@ -2,6 +2,14 @@ require_relative 'eliquid'
 require 'yaml'
 
 module PageParser
+
+  def self.get_all_brands_links(page)
+    dropdowns = page.css('ul.dropdown-wrap')
+    brands= dropdowns[1]
+    brands_links =brands.css('li.dropdown-item').map { |x| x.css('a') }
+    brands_links
+  end
+
   class Brand
 
     attr_accessor :name
@@ -103,16 +111,10 @@ module PageParser
       liquids_hash
     end
 
+
   end
 
-  module_function
 
-  def get_all_brands_links(page)
-    dropdowns = page.css('ul.dropdown-wrap')
-    brands= dropdowns[1]
-    brands_links =brands.css('li.dropdown-item').map { |x| x.css('a') }
-    brands_links
-  end
 end
 
 if __FILE__ == $PROGRAM_NAME
