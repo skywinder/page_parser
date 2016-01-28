@@ -5,22 +5,22 @@ require_relative "liquid_option"
 require_relative "ejuices_parser"
 module DupFinder
 
-  DUP_IMG_NAME = 'dup.png'
+  DUP_COMPARE_NAME = 'dup_to_check.png'
 
-  STUB_IMAGE = "ejuices.png"
+  DOWNLOAD_IMAGE = "ejuice.png"
 
   def self.has_dup_images?(option)
 
     image_url = option.image_url
     image_url.gsub!("https", "http")
-    File.open(DUP_IMG_NAME, 'wb') do |fo|
+    File.open(DOWNLOAD_IMAGE, 'wb') do |fo|
       fo.write open(image_url).read
     end
 
-    img1 = Phashion::Image.new(DUP_IMG_NAME)
-    img2 = Phashion::Image.new(STUB_IMAGE)
+    img1 = Phashion::Image.new(DUP_COMPARE_NAME)
+    img2 = Phashion::Image.new(DOWNLOAD_IMAGE)
     img_duplicate = img1.duplicate?(img2)
-    # remove_file(DUP_IMG_NAME)
+    # remove_file(DOWNLOAD_IMAGE)
     return img_duplicate
   end
 

@@ -1,617 +1,122 @@
 ---
 - !ruby/object:PageParser::Brand
-  name: Top Sellers
-  link: http://www.ejuices.co/collections/top-sellers
+  name: Barz
+  link: http://www.ejuices.co/collections/barz
   liq_hash:
-    BOOSTED: !ruby/object:PageParser::Eliquid
-      liquids_title: BOOSTED
-      liquids_brand: Boosted
-      liquids_description: Some say it taste like a strawberry milkshake. However,
-        it's constantly becoming known for changing flavor.
-      liquids_vg: ''
-      liquids_images: "//cdn.shopify.com/s/files/1/0662/4695/products/boosted_-_boosted_f3956a40-0b05-4664-9fc0-1fea775b2e03_grande.png?v=1453099296"
-      liquids_options:
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 0mg
-        wholesale_price: "$12.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/boosted_-_boosted_f3956a40-0b05-4664-9fc0-1fea775b2e03_grande.png?v=1453099296"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 3mg
-        wholesale_price: "$12.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/boosted_-_boosted_f3956a40-0b05-4664-9fc0-1fea775b2e03_grande.png?v=1453099296"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 6mg
-        wholesale_price: "$12.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/boosted_-_boosted_f3956a40-0b05-4664-9fc0-1fea775b2e03_grande.png?v=1453099296"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 12mg
-        wholesale_price: "$12.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/boosted_-_boosted_f3956a40-0b05-4664-9fc0-1fea775b2e03_grande.png?v=1453099296"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 18mg
-        wholesale_price: "$12.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/boosted_-_boosted_f3956a40-0b05-4664-9fc0-1fea775b2e03_grande.png?v=1453099296"
-    REAR DIFF: !ruby/object:PageParser::Eliquid
-      liquids_title: REAR DIFF
-      liquids_brand: Boosted
-      liquids_description: Think of the best part of the holidays Dessert! This is
-        a sweet savory holiday blend with all the fixings. There is nothing better
-        than this on a cold day with a cup of Pumpkin spice latte. You can't even
-        tell if your drinking or vaping it's that close!
-      liquids_vg: ''
-      liquids_images: "//cdn.shopify.com/s/files/1/0662/4695/products/boosted_-_read_diff_60f69c48-957d-40c1-8021-3d23b0fddbe9_grande.png?v=1453099293"
-      liquids_options:
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 0mg
-        wholesale_price: "$12.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/boosted_-_read_diff_60f69c48-957d-40c1-8021-3d23b0fddbe9_grande.png?v=1453099293"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 3mg
-        wholesale_price: "$12.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/boosted_-_read_diff_60f69c48-957d-40c1-8021-3d23b0fddbe9_grande.png?v=1453099293"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 6mg
-        wholesale_price: "$12.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/boosted_-_read_diff_60f69c48-957d-40c1-8021-3d23b0fddbe9_grande.png?v=1453099293"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 12mg
-        wholesale_price: "$12.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/boosted_-_read_diff_60f69c48-957d-40c1-8021-3d23b0fddbe9_grande.png?v=1453099293"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 18mg
-        wholesale_price: "$12.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/boosted_-_read_diff_60f69c48-957d-40c1-8021-3d23b0fddbe9_grande.png?v=1453099293"
-    Bird Brains: !ruby/object:PageParser::Eliquid
-      liquids_title: Bird Brains
-      liquids_brand: Cuttwood
-      liquids_description: Bird Brains is the newest release from Cuttwood! This is
-        an awesome blend of fruity cereals with a hint of milk.
-      liquids_vg: 70% VG
-      liquids_images: "//cdn.shopify.com/s/files/1/0662/4695/products/OkykWcDu4tPAuhzoF3ATfsqZbSuVXSV-WZtjRkjpB0Q_grande.jpg?v=1453099899"
-      liquids_options:
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 0mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/OkykWcDu4tPAuhzoF3ATfsqZbSuVXSV-WZtjRkjpB0Q_grande.jpg?v=1453099899"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 1.5mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/OkykWcDu4tPAuhzoF3ATfsqZbSuVXSV-WZtjRkjpB0Q_grande.jpg?v=1453099899"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 3mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/OkykWcDu4tPAuhzoF3ATfsqZbSuVXSV-WZtjRkjpB0Q_grande.jpg?v=1453099899"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 6mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/OkykWcDu4tPAuhzoF3ATfsqZbSuVXSV-WZtjRkjpB0Q_grande.jpg?v=1453099899"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 12mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/OkykWcDu4tPAuhzoF3ATfsqZbSuVXSV-WZtjRkjpB0Q_grande.jpg?v=1453099899"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 18mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/OkykWcDu4tPAuhzoF3ATfsqZbSuVXSV-WZtjRkjpB0Q_grande.jpg?v=1453099899"
-    Boss Reserve: !ruby/object:PageParser::Eliquid
-      liquids_title: Boss Reserve
-      liquids_brand: Cuttwood
-      liquids_description: A golden honey graham cereal with roasted nut clusters.
-        Drenched in creamy milk and layered with sliced bananas.
-      liquids_vg: 70% VG
-      liquids_images: "//cdn.shopify.com/s/files/1/0662/4695/products/Boss_Reserve_c2bec25e-f601-4b83-9d13-6fafb8bd1fb2_grande.jpeg?v=1453099897"
-      liquids_options:
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 0mg
-        wholesale_price: "$43.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Boss_Reserve_c2bec25e-f601-4b83-9d13-6fafb8bd1fb2_grande.jpeg?v=1453099897"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 1.5mg
-        wholesale_price: "$43.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Boss_Reserve_c2bec25e-f601-4b83-9d13-6fafb8bd1fb2_grande.jpeg?v=1453099897"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 3mg
-        wholesale_price: "$43.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Boss_Reserve_c2bec25e-f601-4b83-9d13-6fafb8bd1fb2_grande.jpeg?v=1453099897"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 6mg
-        wholesale_price: "$43.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Boss_Reserve_c2bec25e-f601-4b83-9d13-6fafb8bd1fb2_grande.jpeg?v=1453099897"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 12mg
-        wholesale_price: "$43.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Boss_Reserve_c2bec25e-f601-4b83-9d13-6fafb8bd1fb2_grande.jpeg?v=1453099897"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 18mg
-        wholesale_price: "$43.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Boss_Reserve_c2bec25e-f601-4b83-9d13-6fafb8bd1fb2_grande.jpeg?v=1453099897"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 0mg
-        wholesale_price: "$11.50"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Boss_Reserve_grande.jpeg?v=1453099901"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 1.5mg
-        wholesale_price: "$11.50"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Boss_Reserve_grande.jpeg?v=1453099901"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 3mg
-        wholesale_price: "$11.50"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Boss_Reserve_grande.jpeg?v=1453099901"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 6mg
-        wholesale_price: "$11.50"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Boss_Reserve_grande.jpeg?v=1453099901"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 12mg
-        wholesale_price: "$11.50"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Boss_Reserve_grande.jpeg?v=1453099901"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 18mg
-        wholesale_price: "$11.50"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Boss_Reserve_grande.jpeg?v=1453099901"
-    Mega Melons: !ruby/object:PageParser::Eliquid
-      liquids_title: Mega Melons
-      liquids_brand: Cuttwood
-      liquids_description: A trifecta of mango, cantaloupe and papaya creates this
-        delectable combination of refreshing tropical flavors.
-      liquids_vg: 70% VG
-      liquids_images: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_grande.png?v=1453099902"
-      liquids_options:
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 0mg
-        wholesale_price: "$40.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_grande.png?v=1453099902"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 1.5mg
-        wholesale_price: "$40.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_grande.png?v=1453099902"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 3mg
-        wholesale_price: "$40.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_grande.png?v=1453099902"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 6mg
-        wholesale_price: "$40.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_grande.png?v=1453099902"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 12mg
-        wholesale_price: "$40.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_grande.png?v=1453099902"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 18mg
-        wholesale_price: "$40.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_grande.png?v=1453099902"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 0mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_0dbd4738-2541-440f-b86b-0622c6912a88_grande.png?v=1453099903"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 1.5mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_0dbd4738-2541-440f-b86b-0622c6912a88_grande.png?v=1453099903"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 3mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_0dbd4738-2541-440f-b86b-0622c6912a88_grande.png?v=1453099903"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 6mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_0dbd4738-2541-440f-b86b-0622c6912a88_grande.png?v=1453099903"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 12mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_0dbd4738-2541-440f-b86b-0622c6912a88_grande.png?v=1453099903"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 18mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_0dbd4738-2541-440f-b86b-0622c6912a88_grande.png?v=1453099903"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 0mg
-        wholesale_price: "$11.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_ea524de6-9d72-42e8-a9d1-94beccf6bb28_grande.png?v=1453099905"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 1.5mg
-        wholesale_price: "$11.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_ea524de6-9d72-42e8-a9d1-94beccf6bb28_grande.png?v=1453099905"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 3mg
-        wholesale_price: "$11.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_ea524de6-9d72-42e8-a9d1-94beccf6bb28_grande.png?v=1453099905"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 6mg
-        wholesale_price: "$11.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_ea524de6-9d72-42e8-a9d1-94beccf6bb28_grande.png?v=1453099905"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 12mg
-        wholesale_price: "$11.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_ea524de6-9d72-42e8-a9d1-94beccf6bb28_grande.png?v=1453099905"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 18mg
-        wholesale_price: "$11.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_mega_melons_ea524de6-9d72-42e8-a9d1-94beccf6bb28_grande.png?v=1453099905"
-    Sugar Drizzle: !ruby/object:PageParser::Eliquid
-      liquids_title: Sugar Drizzle
-      liquids_brand: Cuttwood
-      liquids_description: Indulge in a perfectly sweet balance of cinnamon and milky
-        cream with sugar bear and satisfy that craving for your favorite breakfast
-        cereal.
-      liquids_vg: 70% VG
-      liquids_images: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_grande.png?v=1453099904"
-      liquids_options:
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 0mg
-        wholesale_price: "$40.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_grande.png?v=1453099904"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 1.5mg
-        wholesale_price: "$40.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_grande.png?v=1453099904"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 3mg
-        wholesale_price: "$40.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_grande.png?v=1453099904"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 6mg
-        wholesale_price: "$40.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_grande.png?v=1453099904"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 12mg
-        wholesale_price: "$40.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_grande.png?v=1453099904"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 18mg
-        wholesale_price: "$40.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_grande.png?v=1453099904"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 0mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_956250f3-7019-40d7-a5a2-3d98908c7061_grande.png?v=1453099907"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 1.5mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_956250f3-7019-40d7-a5a2-3d98908c7061_grande.png?v=1453099907"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 3mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_956250f3-7019-40d7-a5a2-3d98908c7061_grande.png?v=1453099907"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 6mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_956250f3-7019-40d7-a5a2-3d98908c7061_grande.png?v=1453099907"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 12mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_956250f3-7019-40d7-a5a2-3d98908c7061_grande.png?v=1453099907"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 18mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_956250f3-7019-40d7-a5a2-3d98908c7061_grande.png?v=1453099907"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 0mg
-        wholesale_price: "$11.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_2ec16542-d939-4ad9-9ec3-ca12d0e18e88_grande.png?v=1453099908"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 1.5mg
-        wholesale_price: "$11.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_2ec16542-d939-4ad9-9ec3-ca12d0e18e88_grande.png?v=1453099908"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 3mg
-        wholesale_price: "$11.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_2ec16542-d939-4ad9-9ec3-ca12d0e18e88_grande.png?v=1453099908"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 6mg
-        wholesale_price: "$11.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_2ec16542-d939-4ad9-9ec3-ca12d0e18e88_grande.png?v=1453099908"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 12mg
-        wholesale_price: "$11.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_2ec16542-d939-4ad9-9ec3-ca12d0e18e88_grande.png?v=1453099908"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 18mg
-        wholesale_price: "$11.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/cuttwood_-_sugar_drizzle_2ec16542-d939-4ad9-9ec3-ca12d0e18e88_grande.png?v=1453099908"
-    Unicorn Milk: !ruby/object:PageParser::Eliquid
-      liquids_title: Unicorn Milk
-      liquids_brand: Cuttwood
-      liquids_description: A perfect blend of natural strawberry extract and four
-        unique fresh creams.
-      liquids_vg: 70% VG
-      liquids_images: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_4b6914c0-9a33-4443-912b-d91818404a2d_grande.jpeg?v=1453099904"
-      liquids_options:
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 0mg
-        wholesale_price: "$40.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_4b6914c0-9a33-4443-912b-d91818404a2d_grande.jpeg?v=1453099904"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 1.5mg
-        wholesale_price: "$40.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_4b6914c0-9a33-4443-912b-d91818404a2d_grande.jpeg?v=1453099904"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 3mg
-        wholesale_price: "$40.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_4b6914c0-9a33-4443-912b-d91818404a2d_grande.jpeg?v=1453099904"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 6mg
-        wholesale_price: "$40.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_4b6914c0-9a33-4443-912b-d91818404a2d_grande.jpeg?v=1453099904"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 12mg
-        wholesale_price: "$40.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_4b6914c0-9a33-4443-912b-d91818404a2d_grande.jpeg?v=1453099904"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 18mg
-        wholesale_price: "$40.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_4b6914c0-9a33-4443-912b-d91818404a2d_grande.jpeg?v=1453099904"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 0mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_grande.jpeg?v=1453099910"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 1.5mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_grande.jpeg?v=1453099910"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 3mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_grande.jpeg?v=1453099910"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 6mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_grande.jpeg?v=1453099910"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 12mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_grande.jpeg?v=1453099910"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 15ml
-        nic_level: 18mg
-        wholesale_price: "$6.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_grande.jpeg?v=1453099910"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 0mg
-        wholesale_price: "$11.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_e054ac73-2100-48ea-8770-2dc02950258a_grande.jpeg?v=1453099906"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 1.5mg
-        wholesale_price: "$11.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_e054ac73-2100-48ea-8770-2dc02950258a_grande.jpeg?v=1453099906"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 3mg
-        wholesale_price: "$11.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_e054ac73-2100-48ea-8770-2dc02950258a_grande.jpeg?v=1453099906"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 6mg
-        wholesale_price: "$11.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_e054ac73-2100-48ea-8770-2dc02950258a_grande.jpeg?v=1453099906"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 12mg
-        wholesale_price: "$11.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_e054ac73-2100-48ea-8770-2dc02950258a_grande.jpeg?v=1453099906"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 18mg
-        wholesale_price: "$11.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Unicorn_Milk_by_Cuttwood_e054ac73-2100-48ea-8770-2dc02950258a_grande.jpeg?v=1453099906"
-    30ml: !ruby/object:PageParser::Eliquid
-      liquids_title: 30ml
-      liquids_brand: Dewwy Boba
-      liquids_description: 'Charmingly irresistible at it''s counterpart, blended
-        by the same great minds who brought you the Winner of The Florals Category
-        at Vape Summit 2015 ~ Dewwy Boba: The alluring Honeydew, Milk and Boba Tea
-        infusion. '
-      liquids_vg: 70% VG
-      liquids_images: "//cdn.shopify.com/s/files/1/0662/4695/products/dewwy_grande.png?v=1453100051"
-      liquids_options:
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 0mg
-        wholesale_price: "$9.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/dewwy_grande.png?v=1453100051"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 3mg
-        wholesale_price: "$9.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/dewwy_grande.png?v=1453100051"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 6mg
-        wholesale_price: "$9.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/dewwy_grande.png?v=1453100051"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 12mg
-        wholesale_price: "$9.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/dewwy_grande.png?v=1453100051"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 0mg
-        wholesale_price: "$12.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Donuts_Logo_grande.jpg?v=1453100097"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 3mg
-        wholesale_price: "$12.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Donuts_Logo_grande.jpg?v=1453100097"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 30ml
-        nic_level: 6mg
-        wholesale_price: "$12.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Donuts_Logo_grande.jpg?v=1453100097"
-    Pebbles: !ruby/object:PageParser::Eliquid
-      liquids_title: Pebbles
-      liquids_brand: Donuts eJuice
-      liquids_description: Pebble’s Donut is fresh glazed donut, sprinkled with fruity
-        pebbles and then dunked in a delicious glass of milk.
+    Blueberry: !ruby/object:PageParser::Eliquid
+      liquids_title: Blueberry
+      liquids_brand: Barz
+      liquids_description: A perfectly blended blueberry that is sure to hit all the
+        blueberry notes, paired with a cereal-pastry blend and topped off with our
+        signature yogurt icing.
       liquids_vg: 80% VG
-      liquids_images: "//cdn.shopify.com/s/files/1/0662/4695/products/IMG_0076_grande.PNG?v=1453100097"
+      liquids_images: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_7aa2184a-a208-4639-b080-7fb64091a1a2_grande.png?v=1453099085"
       liquids_options:
+      - !ruby/object:PageParser::LiquidOption
+        bottle_size: 15ml
+        nic_level: 0mg
+        wholesale_price: "$5.00"
+        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_7aa2184a-a208-4639-b080-7fb64091a1a2_grande.png?v=1453099085"
+      - !ruby/object:PageParser::LiquidOption
+        bottle_size: 15ml
+        nic_level: 3mg
+        wholesale_price: "$5.00"
+        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_7aa2184a-a208-4639-b080-7fb64091a1a2_grande.png?v=1453099085"
+      - !ruby/object:PageParser::LiquidOption
+        bottle_size: 15ml
+        nic_level: 6mg
+        wholesale_price: "$5.00"
+        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_7aa2184a-a208-4639-b080-7fb64091a1a2_grande.png?v=1453099085"
       - !ruby/object:PageParser::LiquidOption
         bottle_size: 30ml
         nic_level: 0mg
-        wholesale_price: "$12.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/IMG_0076_grande.PNG?v=1453100097"
+        wholesale_price: "$10.00"
+        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_0761b5ef-2b86-414b-a7fd-52510f93a56f_grande.png?v=1453099091"
       - !ruby/object:PageParser::LiquidOption
         bottle_size: 30ml
         nic_level: 3mg
-        wholesale_price: "$12.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/IMG_0076_grande.PNG?v=1453100097"
+        wholesale_price: "$10.00"
+        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_0761b5ef-2b86-414b-a7fd-52510f93a56f_grande.png?v=1453099091"
       - !ruby/object:PageParser::LiquidOption
         bottle_size: 30ml
         nic_level: 6mg
-        wholesale_price: "$12.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/IMG_0076_grande.PNG?v=1453100097"
-    Aftermath: !ruby/object:PageParser::Eliquid
-      liquids_title: Aftermath
-      liquids_brand: Flawless
-      liquids_description: A Creamy Glazed Donut. Filled with juicy blueberry bites.
-        Served with a side of Vanilla Bean ice cream and finished off with a touch
-        of Crunch Berries.
-      liquids_vg: ''
-      liquids_images: "//cdn.shopify.com/s/files/1/0662/4695/products/Flawless_-_Aftermath_4456fffd-b567-4950-8a99-18b6505f34f3_grande.png?v=1453919144"
+        wholesale_price: "$10.00"
+        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_0761b5ef-2b86-414b-a7fd-52510f93a56f_grande.png?v=1453099091"
+    Strawberry: !ruby/object:PageParser::Eliquid
+      liquids_title: Strawberry
+      liquids_brand: Barz
+      liquids_description: " A blend of different strawberries to get that perfect
+        strawberry taste, paired with our signature cereal blend and topped off with
+        our house-made yogurt icing."
+      liquids_vg: 80% VG
+      liquids_images: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_dbf778a7-47b8-4ed4-9095-01384f92cd5e_grande.png?v=1453099089"
       liquids_options:
       - !ruby/object:PageParser::LiquidOption
-        bottle_size: 60ml
+        bottle_size: 15ml
         nic_level: 0mg
-        wholesale_price: "$12.50"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Flawless_-_Aftermath_4456fffd-b567-4950-8a99-18b6505f34f3_grande.png?v=1453919144"
+        wholesale_price: "$5.00"
+        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_dbf778a7-47b8-4ed4-9095-01384f92cd5e_grande.png?v=1453099089"
       - !ruby/object:PageParser::LiquidOption
-        bottle_size: 60ml
-        nic_level: 2mg
-        wholesale_price: "$12.50"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Flawless_-_Aftermath_4456fffd-b567-4950-8a99-18b6505f34f3_grande.png?v=1453919144"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 60ml
-        nic_level: 4mg
-        wholesale_price: "$12.50"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Flawless_-_Aftermath_4456fffd-b567-4950-8a99-18b6505f34f3_grande.png?v=1453919144"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 60ml
-        nic_level: 6mg
-        wholesale_price: "$12.50"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Flawless_-_Aftermath_4456fffd-b567-4950-8a99-18b6505f34f3_grande.png?v=1453919144"
-    Game Over: !ruby/object:PageParser::Eliquid
-      liquids_title: Game Over
-      liquids_brand: Flawless
-      liquids_description: An amazing mix of Fruit Loops and Ice Cream
-      liquids_vg: ''
-      liquids_images: "//cdn.shopify.com/s/files/1/0662/4695/products/Flawless_-_Game_Over_grande.png?v=1453100520"
-      liquids_options:
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 60ml
-        nic_level: 0mg
-        wholesale_price: "$12.50"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Flawless_-_Game_Over_grande.png?v=1453100520"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 60ml
-        nic_level: 2mg
-        wholesale_price: "$12.50"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Flawless_-_Game_Over_grande.png?v=1453100520"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 60ml
-        nic_level: 4mg
-        wholesale_price: "$12.50"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Flawless_-_Game_Over_grande.png?v=1453100520"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 60ml
-        nic_level: 6mg
-        wholesale_price: "$12.50"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/Flawless_-_Game_Over_grande.png?v=1453100520"
-    Cant Catch Me: !ruby/object:PageParser::Eliquid
-      liquids_title: Cant Catch Me
-      liquids_brand: Flawless Seasonal
-      liquids_description: Bite into this perfect holiday cookie. A blend of cookies
-        with swirls of brown sugar, subtle hints of cinnamon, and a sweet ginger donut
-        cream undertone
-      liquids_vg: ''
-      liquids_images: "//cdn.shopify.com/s/files/1/0662/4695/products/juicesdotco_59931d74-158a-45d2-aedb-7b7561b2663a_grande.png?v=1453100521"
-      liquids_options:
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
-        nic_level: 0mg
-        wholesale_price: "$20.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/juicesdotco_59931d74-158a-45d2-aedb-7b7561b2663a_grande.png?v=1453100521"
-      - !ruby/object:PageParser::LiquidOption
-        bottle_size: 120ml
+        bottle_size: 15ml
         nic_level: 3mg
-        wholesale_price: "$20.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/juicesdotco_59931d74-158a-45d2-aedb-7b7561b2663a_grande.png?v=1453100521"
+        wholesale_price: "$5.00"
+        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_dbf778a7-47b8-4ed4-9095-01384f92cd5e_grande.png?v=1453099089"
+      - !ruby/object:PageParser::LiquidOption
+        bottle_size: 15ml
+        nic_level: 6mg
+        wholesale_price: "$5.00"
+        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_dbf778a7-47b8-4ed4-9095-01384f92cd5e_grande.png?v=1453099089"
+      - !ruby/object:PageParser::LiquidOption
+        bottle_size: 30ml
+        nic_level: 0mg
+        wholesale_price: "$10.00"
+        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_e81e36b5-f4a8-48d3-a12e-869ac850e4a9_grande.png?v=1453099090"
+      - !ruby/object:PageParser::LiquidOption
+        bottle_size: 30ml
+        nic_level: 3mg
+        wholesale_price: "$10.00"
+        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_e81e36b5-f4a8-48d3-a12e-869ac850e4a9_grande.png?v=1453099090"
+      - !ruby/object:PageParser::LiquidOption
+        bottle_size: 30ml
+        nic_level: 6mg
+        wholesale_price: "$10.00"
+        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_e81e36b5-f4a8-48d3-a12e-869ac850e4a9_grande.png?v=1453099090"
+    Strawnanna: !ruby/object:PageParser::Eliquid
+      liquids_title: Strawnanna
+      liquids_brand: Barz
+      liquids_description: A blend of fresh strawberries and a dollop of banana for
+        an extremely fresh taste, without the candy undertones. Also combined with
+        our secret cereal and yogurt icing blend.
+      liquids_vg: 80% VG
+      liquids_images: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_7eab87d2-6a2b-4048-9be2-7f6bcf03bea4_grande.png?v=1453099091"
+      liquids_options:
+      - !ruby/object:PageParser::LiquidOption
+        bottle_size: 15ml
+        nic_level: 0mg
+        wholesale_price: "$5.00"
+        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_7eab87d2-6a2b-4048-9be2-7f6bcf03bea4_grande.png?v=1453099091"
+      - !ruby/object:PageParser::LiquidOption
+        bottle_size: 15ml
+        nic_level: 3mg
+        wholesale_price: "$5.00"
+        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_7eab87d2-6a2b-4048-9be2-7f6bcf03bea4_grande.png?v=1453099091"
+      - !ruby/object:PageParser::LiquidOption
+        bottle_size: 15ml
+        nic_level: 6mg
+        wholesale_price: "$5.00"
+        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_7eab87d2-6a2b-4048-9be2-7f6bcf03bea4_grande.png?v=1453099091"
+      - !ruby/object:PageParser::LiquidOption
+        bottle_size: 30ml
+        nic_level: 0mg
+        wholesale_price: "$10.00"
+        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_da49b320-549b-43f9-a8ac-26e58f2cd641_grande.png?v=1453099092"
+      - !ruby/object:PageParser::LiquidOption
+        bottle_size: 30ml
+        nic_level: 3mg
+        wholesale_price: "$10.00"
+        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_da49b320-549b-43f9-a8ac-26e58f2cd641_grande.png?v=1453099092"
+      - !ruby/object:PageParser::LiquidOption
+        bottle_size: 30ml
+        nic_level: 6mg
+        wholesale_price: "$10.00"
+        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_da49b320-549b-43f9-a8ac-26e58f2cd641_grande.png?v=1453099092"
