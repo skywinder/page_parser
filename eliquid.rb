@@ -32,6 +32,7 @@ module PageParser
         @@empty_liquids.push(@liquids_title)
         return []
       end
+      self.liquids_options.each {|o| o.check_dup }
       opts = self.liquids_options.dup
       str = self.fill_first_string(opts.shift)
       csv_arr = [str]

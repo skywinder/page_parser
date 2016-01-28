@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'restclient'
 require 'nokogiri'
+require 'yaml'
 require_relative 'brand'
 require_relative 'csv_exporter'
 
@@ -24,7 +25,7 @@ module PageParser
     # brands_links.each { |n, l| puts "#{n} #{l}" }
 
     all_brands = []
-    brand = nil
+    brand = "Barz"
     if brand.nil?
       brands_links.take(1).each { |b|
         name = b[0]
@@ -77,7 +78,7 @@ end
 
 if __FILE__ == $PROGRAM_NAME
 
-  PageParser.parse "#{BRANDS_FILE}-#{Time.now.to_i}.bk
-  # csv_from_file "#{BRANDS_FILE}.bk"
-
+  # PageParser.parse "#{BRANDS_FILE}-#{Time.now.to_i}.bk
+  # PageParser.parse "brand_one.bk"
+  csv_from_file "brands.bk"
 end

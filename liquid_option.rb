@@ -1,3 +1,5 @@
+require_relative 'dup_finder'
+
 module PageParser
   class LiquidOption
     attr_reader :image_url
@@ -14,8 +16,14 @@ module PageParser
 
     MULTIPLIER = 2.0
 
+    def check_dup
+      if DupFinder.has_dup_images? self
+        @image_url = ""
+      end
+    end
+
     def retailing_price
-      price = @wholesale_price.gsub(/[^\d\.]/,'')
+      price = @wholesale_price.gsub(/[^\d\.]/, '')
       price_double = price.to_f * MULTIPLIER
       price_double
     end
