@@ -3,11 +3,13 @@ require_relative "liquid_option"
 require_relative "ejuices_parser"
 module DupFinder
 
+  DUP_IMG_NAME = 'dup.png'
+
   def self.has_dup_images?(option)
 
     image_url = option.image_url
-
-    File.open('dup.png', 'wb') do |fo|
+    image_url.gsub!("https", "http")
+    File.open(DUP_IMG_NAME, 'wb') do |fo|
       fo.write open(image_url).read
     end
 
