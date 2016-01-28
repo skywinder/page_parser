@@ -8,11 +8,11 @@ module PageParser
   BASE_URL = 'http://www.ejuices.co'
   WEB_STRING = "http://www.ejuices.co/collections/all-brands"
 
-  BRANDS_FILE = './brands.bk'
+  BRANDS_FILE = './brands'
 
   module_function
 
-  def parse(brand = nil)
+  def parse(file_name)
     page = Nokogiri::HTML(RestClient.get(WEB_STRING))
     brands_links = PageParser.get_all_brands_links(page)
     all_brands_links = brands_links.map { |x| BASE_URL+x[0]['href'] }
@@ -24,9 +24,9 @@ module PageParser
     # brands_links.each { |n, l| puts "#{n} #{l}" }
 
     all_brands = []
+    brand = nil
     if brand.nil?
-
-      brands_links.each { |b|
+      brands_links.take(1).each { |b|
         name = b[0]
         link = b[1]
         puts "Parse brand: #{name}"
@@ -53,27 +53,30 @@ module PageParser
       end
       all_brands.push(new_brand)
     end
-    save_brands(all_brands)
+
+
+    save_brands(all_brands, filename)
     puts all_brands
   end
 
 
-  def save_brands(all_brands)
-    File.open("#{BRANDS_FILE}-#{Time.now.to_i}", 'w') { |f| f.write(YAML.dump(all_brands)) }
+  def save_brands(all_brands, filename = "#{BRANDS_FILE}-#{Time.now.to_i}.bk")
+    File.open(filename, 'w') { |f| f.write(YAML.dump(all_brands)) }
   end
 
-  def self.load_brands
-    YAML.load(File.read(BRANDS_FILE))
+  def self.load_brands(filename)
+    YAML.load(File.read(filename))
   end
 end
 
 
-def csv_from_file
-  brands = PageParser.load_brands
+def csv_from_file(filename)
+  brands = PageParser.load_brands(filename)
   PageParser::CSVExporter.export_to_csv brands
 end
 
 if __FILE__ == $PROGRAM_NAME
-  PageParser.parse # => Nokogiri::HTML::Document
-  # csv_from_file
+
+  PageParser.parse "brand_one.bk"
+  # csv_from_file "#{BRANDS_FILE}.bk"
 end
