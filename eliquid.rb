@@ -16,6 +16,7 @@ module PageParser
       liquids_option.each { |option_string|
         liquid_option = PageParser::LiquidOption.new(option_string, liquids_images)
         if liquid_option
+          liquid_option.check_dup
           @liquids_options.push(liquid_option)
         end
       }
@@ -32,6 +33,7 @@ module PageParser
         @@empty_liquids.push(@liquids_title)
         return []
       end
+      self.liquids_options.each {|o| o.check_dup }
       opts = self.liquids_options.dup
       str = self.fill_first_string(opts.shift)
       csv_arr = [str]

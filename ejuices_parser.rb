@@ -1,6 +1,8 @@
 require 'rubygems'
 require 'restclient'
 require 'nokogiri'
+require 'yaml'
+
 require_relative 'brand'
 require_relative 'csv_exporter'
 
@@ -8,13 +10,13 @@ module PageParser
   BASE_URL = 'http://www.ejuices.co'
   WEB_STRING = "http://www.ejuices.co/collections/all-brands"
 
-  BRANDS_FILE = './brands.bk'
+  BRANDS_FILE = './brands'
 
   module_function
 
-  def parse(brand = nil)
+  def parse(filename)
     page = Nokogiri::HTML(RestClient.get(WEB_STRING))
-    brands_links = PageParser.get_all_brands_links(page)
+    brands_links = PageParser.get_all_brands_links page
     all_brands_links = brands_links.map { |x| BASE_URL+x[0]['href'] }
     # puts all_brands_links
     all_brands_names = brands_links.map { |x| x[0].text }
@@ -24,9 +26,9 @@ module PageParser
     # brands_links.each { |n, l| puts "#{n} #{l}" }
 
     all_brands = []
+    brand = "Barz"
     if brand.nil?
-
-      brands_links.each { |b|
+      brands_links.take(1).each { |b|
         name = b[0]
         link = b[1]
         puts "Parse brand: #{name}"
@@ -44,7 +46,7 @@ module PageParser
       name = b[0]
       link = b[1]
       puts "Parse brand: #{name}"
-      new_brand = Brand.new(name, link)
+      new_brand = PageParser::Brand.new(name, link)
       begin
         new_brand.fetch_liquids
       rescue => e
@@ -53,27 +55,40 @@ module PageParser
       end
       all_brands.push(new_brand)
     end
-    save_brands(all_brands)
+
+
+    save_brands(all_brands, filename)
     puts all_brands
   end
 
 
-  def save_brands(all_brands)
-    File.open("#{BRANDS_FILE}-#{Time.now.to_i}", 'w') { |f| f.write(YAML.dump(all_brands)) }
+  def save_brands(all_brands, filename)
+    File.open(filename, 'w') { |f| f.write(YAML.dump(all_brands)) }
   end
 
-  def self.load_brands
-    YAML.load(File.read(BRANDS_FILE))
+  def self.load_brands(filename)
+    YAML.load(File.read(filename))
+  end
+
+  module_function
+
+  def get_all_brands_links(page)
+    dropdowns = page.css('ul.dropdown-wrap')
+    brands= dropdowns[1]
+    brands_links =brands.css('li.dropdown-item').map { |x| x.css('a') }
+    brands_links
   end
 end
 
 
-def csv_from_file
-  brands = PageParser.load_brands
+def csv_from_file(filename)
+  brands = PageParser.load_brands(filename)
   PageParser::CSVExporter.export_to_csv brands
 end
 
 if __FILE__ == $PROGRAM_NAME
-  PageParser.parse # => Nokogiri::HTML::Document
-  # csv_from_file
+
+  # PageParser.parse "#{BRANDS_FILE}-#{Time.now.to_i}.bk"
+  PageParser.parse "brand_one.bk"
+  # csv_from_file "brands.bk"
 end
