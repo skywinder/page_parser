@@ -16,11 +16,19 @@ module PageParser
 
     MULTIPLIER = 2.0
 
-    def opt_check_dup
+    def remove_image(image_url)
+      if self.image_url == image_url
+        @image_url = ""
+      end
+    end
+
+    def opt_check_has_dup?
       if DupFinder.has_dup_images? self.image_url
         puts "delete dup: #{@image_url}"
         @image_url = ""
+        return true
       end
+      false
     end
 
     def retailing_price

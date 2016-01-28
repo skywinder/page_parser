@@ -44,7 +44,22 @@ module PageParser
     end
 
     def liquid_check_for_dups
-      self.liquids_options.each { |o| o.opt_check_dup }
+      checked_a = []
+      self.liquids_options.each { |o|
+        image_url = o.image_url
+        unless checked_a.include? image_url
+          if o.opt_check_has_dup?
+            self.remove_img_from_options image_url
+          end
+          checked_a.push(image_url)
+        end
+      }
+    end
+
+    def remove_img_from_options(image_url)
+      self.liquids_options.each do |opt|
+        opt.remove_image image_url
+      end
     end
 
     def fill_next_strings(option)

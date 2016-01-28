@@ -39,9 +39,11 @@ module PageParser
       self.write_scv(string)
     end
 
-    def self.write_scv(string)
+    def self.write_scv(data)
       # code here
-      File.open("#{CSV_FILE}-#{Time.now.to_i}.csv", 'w') { |f| f.write(string) }
+      filename_csv = "#{CSV_FILE}-#{Time.now.to_i}.csv"
+      File.open(filename_csv, 'w') { |f| f.write(data) }
+      puts "Save #{filename_csv} complete"
     end
 
     def self.first_string

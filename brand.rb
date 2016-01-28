@@ -24,11 +24,13 @@ module PageParser
 
     end
 
-   def brand_check_for_dup
-     self.liq_hash.each { |liquid|
-       liquid[1].liquid_check_for_dups
-     }
-   end
+    def brand_check_for_dup
+      unless self.liq_hash.nil?
+        self.liq_hash.each { |liquid|
+          liquid[1].liquid_check_for_dups
+        }
+      end
+    end
 
     def fetch_liquids
       page = Nokogiri::HTML(RestClient.get(self.link))
