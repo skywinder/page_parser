@@ -30,16 +30,17 @@ module PageParser
         p = product_css[1]
         text = p.text
         if text.include? "VG"
-          return text
+          vg_ratio = text
+        else
+          # try to find vg in others
+          product_css.each { |p|
+            text = p.text
+            if text.include? "VG"
+              vg_ratio = text
+              break
+            end
+          }
         end
-        # try to find vg in others
-        product_css.each { |p|
-          text = p.text
-          if text.include? "VG"
-            vg_ratio = text
-            break
-          end
-        }
         vg_ratio
       }
       liquids_description = page_css.map { |product|

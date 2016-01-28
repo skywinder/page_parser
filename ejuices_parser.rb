@@ -75,5 +75,5 @@ end
 
 if __FILE__ == $PROGRAM_NAME
   PageParser.parse # => Nokogiri::HTML::Document
-  csv_from_file
+  # csv_from_file
 end
