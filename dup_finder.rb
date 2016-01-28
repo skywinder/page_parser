@@ -3,6 +3,37 @@ require 'phashion'
 
 module DupFinder
 
+  KNOWN_DUPS = ["Aloha eLiquids",
+                "Apothecary Tonics",
+                "Balls Vape",
+                "Barz",
+                "Cashmere Millionaires",
+                "Cereal City Vapes",
+                "Exodus",
+                "Flavies Juicy Brew",
+                "Fluids by Intellect",
+                "Fuug Life",
+                "Hot Cloudz",
+                "Locked and Loaded E-Liquid",
+                "Merkury",
+                "Nautical Vapors",
+                "Pinstripe Elixir",
+                "Rig Reserve",
+                "Saucy Drops",
+                "The GodVapor",
+                "The Fix e-Liquid",
+                "The Neighborhood",
+                "The Pale Whale",
+                "The Vape Barrel",
+                "TSL Flavors",
+                "Utopia",
+                "V8P Juice",
+                "Vape Dudes",
+                "VAPELYFE",
+                "Vaporean",
+                "Winners Circle",
+                "YGRT eliquid"]
+
   DUP_COMPARE_NAME = 'dup_to_check.png'
 
   DOWNLOAD_IMAGE = "ejuice.png"
