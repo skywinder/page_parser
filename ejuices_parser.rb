@@ -26,7 +26,7 @@ module PageParser
     all_brands = []
     if brand.nil?
 
-      brands_links.take(1).each { |b|
+      brands_links.each { |b|
         name = b[0]
         link = b[1]
         puts "Parse brand: #{name}"
