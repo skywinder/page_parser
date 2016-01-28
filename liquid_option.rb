@@ -16,8 +16,9 @@ module PageParser
 
     MULTIPLIER = 2.0
 
-    def check_dup
-      if DupFinder.has_dup_images? self
+    def opt_check_dup
+      if DupFinder.has_dup_images? self.image_url
+        puts "delete dup: #{@image_url}"
         @image_url = ""
       end
     end
@@ -34,6 +35,9 @@ module PageParser
     end
 
     def image_url
+      if @image_url.empty?
+        return ""
+      end
       "https:#{@image_url}"
     end
   end

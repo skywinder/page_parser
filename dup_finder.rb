@@ -1,17 +1,17 @@
 require "open-uri"
 require 'phashion'
 
-require_relative "liquid_option"
-require_relative "ejuices_parser"
-module PageParser
+module DupFinder
 
   DUP_COMPARE_NAME = 'dup_to_check.png'
 
   DOWNLOAD_IMAGE = "ejuice.png"
 
-  def self.has_dup_images?(option)
+  def self.has_dup_images?(image_url)
 
-    image_url = option.image_url
+    if image_url.empty?
+      return false
+    end
     image_url.gsub!("https", "http")
     File.open(DOWNLOAD_IMAGE, 'wb') do |fo|
       fo.write open(image_url).read
@@ -20,11 +20,8 @@ module PageParser
     img1 = Phashion::Image.new(DUP_COMPARE_NAME)
     img2 = Phashion::Image.new(DOWNLOAD_IMAGE)
     img_duplicate = img1.duplicate?(img2)
-    # remove_file(DOWNLOAD_IMAGE)
     return img_duplicate
   end
-
-
 end
 
 def remove_file(file)
@@ -39,9 +36,9 @@ def first_option(brands)
 end
 
 if __FILE__ == $PROGRAM_NAME
-  brands = PageParser.load_brands("brand_one.bk")
-  option = first_option(brands)
-  is_dup = PageParser.has_dup_images? option
-
-  puts is_dup
+  # brands = PageParser.load_brands("brand_one.bk")
+  # option = first_option(brands)
+  # is_dup = DupFinder.has_dup_images? option
+  #
+  # puts is_dup
 end

@@ -16,32 +16,32 @@
         bottle_size: 15ml
         nic_level: 0mg
         wholesale_price: "$5.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_7aa2184a-a208-4639-b080-7fb64091a1a2_grande.png?v=1453099085"
+        image_url: ''
       - !ruby/object:PageParser::LiquidOption
         bottle_size: 15ml
         nic_level: 3mg
         wholesale_price: "$5.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_7aa2184a-a208-4639-b080-7fb64091a1a2_grande.png?v=1453099085"
+        image_url: ''
       - !ruby/object:PageParser::LiquidOption
         bottle_size: 15ml
         nic_level: 6mg
         wholesale_price: "$5.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_7aa2184a-a208-4639-b080-7fb64091a1a2_grande.png?v=1453099085"
+        image_url: ''
       - !ruby/object:PageParser::LiquidOption
         bottle_size: 30ml
         nic_level: 0mg
         wholesale_price: "$10.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_0761b5ef-2b86-414b-a7fd-52510f93a56f_grande.png?v=1453099091"
+        image_url: ''
       - !ruby/object:PageParser::LiquidOption
         bottle_size: 30ml
         nic_level: 3mg
         wholesale_price: "$10.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_0761b5ef-2b86-414b-a7fd-52510f93a56f_grande.png?v=1453099091"
+        image_url: ''
       - !ruby/object:PageParser::LiquidOption
         bottle_size: 30ml
         nic_level: 6mg
         wholesale_price: "$10.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_0761b5ef-2b86-414b-a7fd-52510f93a56f_grande.png?v=1453099091"
+        image_url: ''
     Strawberry: !ruby/object:PageParser::Eliquid
       liquids_title: Strawberry
       liquids_brand: Barz
@@ -55,32 +55,32 @@
         bottle_size: 15ml
         nic_level: 0mg
         wholesale_price: "$5.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_dbf778a7-47b8-4ed4-9095-01384f92cd5e_grande.png?v=1453099089"
+        image_url: ''
       - !ruby/object:PageParser::LiquidOption
         bottle_size: 15ml
         nic_level: 3mg
         wholesale_price: "$5.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_dbf778a7-47b8-4ed4-9095-01384f92cd5e_grande.png?v=1453099089"
+        image_url: ''
       - !ruby/object:PageParser::LiquidOption
         bottle_size: 15ml
         nic_level: 6mg
         wholesale_price: "$5.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_dbf778a7-47b8-4ed4-9095-01384f92cd5e_grande.png?v=1453099089"
+        image_url: ''
       - !ruby/object:PageParser::LiquidOption
         bottle_size: 30ml
         nic_level: 0mg
         wholesale_price: "$10.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_e81e36b5-f4a8-48d3-a12e-869ac850e4a9_grande.png?v=1453099090"
+        image_url: ''
       - !ruby/object:PageParser::LiquidOption
         bottle_size: 30ml
         nic_level: 3mg
         wholesale_price: "$10.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_e81e36b5-f4a8-48d3-a12e-869ac850e4a9_grande.png?v=1453099090"
+        image_url: ''
       - !ruby/object:PageParser::LiquidOption
         bottle_size: 30ml
         nic_level: 6mg
         wholesale_price: "$10.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_e81e36b5-f4a8-48d3-a12e-869ac850e4a9_grande.png?v=1453099090"
+        image_url: ''
     Strawnanna: !ruby/object:PageParser::Eliquid
       liquids_title: Strawnanna
       liquids_brand: Barz
@@ -94,29 +94,29 @@
         bottle_size: 15ml
         nic_level: 0mg
         wholesale_price: "$5.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_7eab87d2-6a2b-4048-9be2-7f6bcf03bea4_grande.png?v=1453099091"
+        image_url: ''
       - !ruby/object:PageParser::LiquidOption
         bottle_size: 15ml
         nic_level: 3mg
         wholesale_price: "$5.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_7eab87d2-6a2b-4048-9be2-7f6bcf03bea4_grande.png?v=1453099091"
+        image_url: ''
       - !ruby/object:PageParser::LiquidOption
         bottle_size: 15ml
         nic_level: 6mg
         wholesale_price: "$5.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_7eab87d2-6a2b-4048-9be2-7f6bcf03bea4_grande.png?v=1453099091"
+        image_url: ''
       - !ruby/object:PageParser::LiquidOption
         bottle_size: 30ml
         nic_level: 0mg
         wholesale_price: "$10.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_da49b320-549b-43f9-a8ac-26e58f2cd641_grande.png?v=1453099092"
+        image_url: ''
       - !ruby/object:PageParser::LiquidOption
         bottle_size: 30ml
         nic_level: 3mg
         wholesale_price: "$10.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_da49b320-549b-43f9-a8ac-26e58f2cd641_grande.png?v=1453099092"
+        image_url: ''
       - !ruby/object:PageParser::LiquidOption
         bottle_size: 30ml
         nic_level: 6mg
         wholesale_price: "$10.00"
-        image_url: "//cdn.shopify.com/s/files/1/0662/4695/products/ejuicesdotco_large_da49b320-549b-43f9-a8ac-26e58f2cd641_grande.png?v=1453099092"
+        image_url: ''

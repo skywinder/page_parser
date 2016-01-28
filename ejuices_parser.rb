@@ -14,7 +14,7 @@ module PageParser
 
   module_function
 
-  def parse(filename)
+  def parse(bk_filename)
     page = Nokogiri::HTML(RestClient.get(WEB_STRING))
     brands_links = PageParser.get_all_brands_links page
     all_brands_links = brands_links.map { |x| BASE_URL+x[0]['href'] }
@@ -26,9 +26,9 @@ module PageParser
     # brands_links.each { |n, l| puts "#{n} #{l}" }
 
     all_brands = []
-    brand = "Barz"
+    brand = nil #"Barz"
     if brand.nil?
-      brands_links.take(1).each { |b|
+      brands_links.each { |b|
         name = b[0]
         link = b[1]
         puts "Parse brand: #{name}"
@@ -42,7 +42,7 @@ module PageParser
         all_brands.push(new_brand)
       }
     else
-      b = brands_links.detect{|br| br[0].include? brand}
+      b = brands_links.detect { |br| br[0].include? brand }
       name = b[0]
       link = b[1]
       puts "Parse brand: #{name}"
@@ -56,9 +56,17 @@ module PageParser
       all_brands.push(new_brand)
     end
 
+    puts "saving brands"
 
-    save_brands(all_brands, filename)
-    puts all_brands
+    save_brands(all_brands, "#{bk_filename}-with_dup")
+
+
+    all_brands.each { |b|
+      puts "check dup: #{b.name}"
+      b.brand_check_for_dup }
+
+    save_brands(all_brands, "#{bk_filename}")
+
   end
 
 
@@ -77,9 +85,13 @@ def csv_from_file(filename)
   PageParser::CSVExporter.export_to_csv brands
 end
 
+FILENAME = "brands.bk"
+# FILENAME = "brand_one.bk"
+
 if __FILE__ == $PROGRAM_NAME
 
   # PageParser.parse "#{BRANDS_FILE}-#{Time.now.to_i}.bk"
-  PageParser.parse "brand_one.bk"
-  # csv_from_file "brands.bk"
+  PageParser.parse FILENAME
+  csv_from_file FILENAME
+  # csv_from_file "brand_one.bk"
 end
