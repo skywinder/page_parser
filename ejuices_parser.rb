@@ -12,7 +12,7 @@ module PageParser
 
   module_function
 
-  def parse
+  def parse(brand = nil)
     page = Nokogiri::HTML(RestClient.get(WEB_STRING))
     brands_links = PageParser.get_all_brands_links(page)
     all_brands_links = brands_links.map { |x| BASE_URL+x[0]['href'] }
@@ -20,11 +20,27 @@ module PageParser
     all_brands_names = brands_links.map { |x| x[0].text }
 
 
-    brands_links_take = all_brands_names.zip(all_brands_links)
-    # brands_links_take.each { |n, l| puts "#{n} #{l}" }
+    brands_links = all_brands_names.zip(all_brands_links)
+    # brands_links.each { |n, l| puts "#{n} #{l}" }
 
     all_brands = []
-    brands_links_take.each { |b|
+    if brand.nil?
+
+      brands_links.take(1).each { |b|
+        name = b[0]
+        link = b[1]
+        puts "Parse brand: #{name}"
+        new_brand = Brand.new(name, link)
+        begin
+          new_brand.fetch_liquids
+        rescue => e
+          puts "FAIL_TO_PARSE"
+          puts e
+        end
+        all_brands.push(new_brand)
+      }
+    else
+      b = brands_links.detect{|br| br[0].include? brand}
       name = b[0]
       link = b[1]
       puts "Parse brand: #{name}"
@@ -35,10 +51,8 @@ module PageParser
         puts "FAIL_TO_PARSE"
         puts e
       end
-
       all_brands.push(new_brand)
-    }
-
+    end
     save_brands(all_brands)
     puts all_brands
   end
@@ -54,8 +68,12 @@ module PageParser
 end
 
 
-if __FILE__ == $PROGRAM_NAME
-  # PageParser.parse # => Nokogiri::HTML::Document
+def csv_from_file
   brands = PageParser.load_brands
   PageParser::CSVExporter.export_to_csv brands
+end
+
+if __FILE__ == $PROGRAM_NAME
+  PageParser.parse # => Nokogiri::HTML::Document
+  csv_from_file
 end

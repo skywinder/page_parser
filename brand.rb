@@ -25,7 +25,22 @@ module PageParser
       }
 
       liquids_vg = page_css.map { |product|
-        product.css('p')[1].css('span').text
+        vg_ratio = ""
+        product_css = product.css('p')
+        p = product_css[1]
+        text = p.text
+        if text.include? "VG"
+          return text
+        end
+        # try to find vg in others
+        product_css.each { |p|
+          text = p.text
+          if text.include? "VG"
+            vg_ratio = text
+            break
+          end
+        }
+        vg_ratio
       }
       liquids_description = page_css.map { |product|
         product.css('p')[0].text
