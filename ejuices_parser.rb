@@ -90,7 +90,9 @@ end
 
 
 def csv_from_file(filename)
+  puts "Loading brands..."
   brands = PageParser.load_brands(filename)
+  puts "exporting csv..."
   PageParser::CSVExporter.export_to_csv brands
 end
 
@@ -102,7 +104,7 @@ if __FILE__ == $PROGRAM_NAME
 
   # PageParser.parse "#{BRANDS_FILE}-#{Time.now.to_i}.bk"
   # PageParser.parse FILENAME
-  PageParser.check_brands_for_dups FILENAME
+  # PageParser.check_brands_for_dups FILENAME
   csv_from_file FILENAME
   # csv_from_file "brand_one.bk"
 end

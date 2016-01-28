@@ -118,11 +118,7 @@ module PageParser
       end
       liquids_hash
     end
-
-
   end
-
-
 end
 
 if __FILE__ == $PROGRAM_NAME
