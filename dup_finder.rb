@@ -20,6 +20,7 @@ module DupFinder
     img1 = Phashion::Image.new(DUP_IMG_NAME)
     img2 = Phashion::Image.new(STUB_IMAGE)
     img_duplicate = img1.duplicate?(img2)
+    DupFinder.remove_file(DUP_IMG_NAME)
     return img_duplicate
   end
 
