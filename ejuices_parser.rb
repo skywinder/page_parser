@@ -74,6 +74,7 @@ module PageParser
       puts "check dup: #{b.name}"
       b.brand_check_for_dup
     }
+    DupFinder.remove_file
 
     save_brands(all_brands, "#{bk_filename}")
   end

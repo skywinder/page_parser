@@ -55,7 +55,7 @@ module DupFinder
   end
 end
 
-def remove_file(file)
+def self.remove_file(file = DOWNLOAD_IMAGE)
   File.delete(file)
 end
 

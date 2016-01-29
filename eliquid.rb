@@ -107,7 +107,6 @@ module PageParser
   end
 
 end
-end
 
 if __FILE__ == $PROGRAM_NAME
   # liq = PageParser::Eliquid.new("ima","vg","liq_desc","liq_brand","liqTitle","liqoption" ) # => Nokogiri::HTML::Document
